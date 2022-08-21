@@ -1,0 +1,20 @@
+{
+  "name": "urlshortner",
+  "version": "1.0.0",
+  "description": "converts long url into short url",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.js"
+  },
+  "author": "LokSantosh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.4.6",
+    "nodemon": "^2.0.19",
+    "redis": "^3.1.2",
+    "shortid": "^2.2.16",
+    "url-validation": "^2.1.0"
+  }
+}
