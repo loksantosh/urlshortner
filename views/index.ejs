@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Url Shortner</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body style="background-color: lightblue">
+    <div class="container">
+      <h1 style="font-size: 100px">Url Shortner</h1>
+      <form action="/url/shorten" method="post">
+        <input
+          type="url"
+          name="longUrl"
+          id="longUrl"
+         placeholder="enter url"
+          style="width: 50%"
+          required
+        />
+        <button type="submit" class="btn btn-success">clickHere</button>
+      </form>
+
+      <table class="table table-striped table-responsive">
+        <thread>
+          <tr>
+            <th>Url</th>
+            <th>ShortUrl</th>
+          </tr>
+        </thread>
+        <tbody >
+          <% shortUrls.forEach(x => { %>
+          <tr>
+            <td><a href="<%=x.longUrl %> "><%=x.longUrl %> </a> </td>
+            <td> <a href="<%=x.longUrl %> " target="_blank"><%=x.shortUrl %> </a></td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
